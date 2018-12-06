@@ -5,32 +5,34 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 public class MainFrame extends JFrame {
-	public MainFrame(String title) {
-		super(title);
+
+    /**
+     * Construct the main frame
+     */
+	public MainFrame() {
 		
+	    super("Mariel's sample java program");
 		setLayout(new BorderLayout());
 		
-		final JTextArea textArea = new JTextArea();
+		// Text area
+		JTextArea textArea = new JTextArea();
+        this.getContentPane().add(textArea, BorderLayout.CENTER);
+		
+		// Button
 		JButton button = new JButton("Produce Text");
-		
-		Container c = getContentPane();
-		
-		c.add(textArea, BorderLayout.CENTER);
-		c.add(button, BorderLayout.EAST);
-		
+		JPanel buttonPanel = new JPanel();
+		buttonPanel.add(button);
+		this.getContentPane().add(buttonPanel, BorderLayout.EAST);
 		button.addActionListener(new ActionListener() {		
-			
-
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				textArea.append("Hello\n");
-				
 			}
 		});
-		
 	}
 
 }
