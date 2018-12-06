@@ -3,6 +3,7 @@ import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,17 +23,29 @@ public class MainFrame extends JFrame {
 		JTextArea textArea = new JTextArea();
         this.getContentPane().add(textArea, BorderLayout.CENTER);
 		
-		// Button
-		JButton button = new JButton("Produce Text");
-		JPanel buttonPanel = new JPanel();
-		buttonPanel.add(button);
-		this.getContentPane().add(buttonPanel, BorderLayout.EAST);
-		button.addActionListener(new ActionListener() {		
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				textArea.append("Hello\n");
-			}
-		});
+		// Button Panel
+        JButton produceTextButton = new JButton("Produce Text");
+        produceTextButton.addActionListener(new ActionListener() {      
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                textArea.append("Hello\n");
+            }
+        });
+        JButton anotherButton = new JButton("Another button");
+        anotherButton.addActionListener(new ActionListener() {      
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                textArea.append("Hello again another\n");
+            }
+        });
+	
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
+        buttonPanel.add(produceTextButton);
+        buttonPanel.add(anotherButton);
+        this.getContentPane().add(buttonPanel, BorderLayout.EAST);
+		
+	
 	}
 
 }
