@@ -24,25 +24,56 @@ public class MainFrame extends JFrame {
         this.getContentPane().add(textArea, BorderLayout.CENTER);
 		
 		// Button Panel
-        JButton produceTextButton = new JButton("Produce Text");
-        produceTextButton.addActionListener(new ActionListener() {      
+        JButton push = new JButton("Push");
+        push.addActionListener(new ActionListener() {      
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                textArea.append("Hello\n");
+                textArea.append("Push");
             }
         });
-        JButton anotherButton = new JButton("Another button");
-        anotherButton.addActionListener(new ActionListener() {      
+        JButton my = new JButton("My");
+        my.addActionListener(new ActionListener() {      
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                textArea.append("Hello again another\n");
+                textArea.append("My");
             }
         });
-	
+        JButton buttons = new JButton("Buttons");
+        my.addActionListener(new ActionListener() {      
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                textArea.append("Buttons");
+            }
+        });
+        JButton i = new JButton("I");
+        push.addActionListener(new ActionListener() {      
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                textArea.append("I");
+            }
+        });
+        JButton dare = new JButton("Dare");
+        my.addActionListener(new ActionListener() {      
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                textArea.append("Dare");
+            }
+        });
+        JButton you = new JButton("You");
+        my.addActionListener(new ActionListener() {      
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                textArea.append("You");
+            }
+        });
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
-        buttonPanel.add(produceTextButton);
-        buttonPanel.add(anotherButton);
+        buttonPanel.add(push);
+        buttonPanel.add(my);
+        buttonPanel.add(buttons);
+        buttonPanel.add(i);
+        buttonPanel.add(dare);
+        buttonPanel.add(you);
         this.getContentPane().add(buttonPanel, BorderLayout.EAST);
 		
 	
