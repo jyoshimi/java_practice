@@ -7,10 +7,10 @@ import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
  
-public class WordTable extends JPanel {
+public class SwingingAround extends JPanel {
     private boolean DEBUG = false;
  
-    public WordTable() {
+    public SwingingAround() {
         super(new GridLayout(1,0));
  
         String[] columnNames = {"Display Word"};
@@ -85,7 +85,7 @@ public class WordTable extends JPanel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
         //Create and set up the content pane.
-        WordTable newWordTable = new WordTable();
+        SwingingAround newWordTable = new SwingingAround();
         newWordTable.setOpaque(true); //content panes must be opaque
         frame.setContentPane(newWordTable);
  

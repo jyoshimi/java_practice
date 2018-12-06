@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+// TODO: Rename with camel case.  Classes should not have lower case first letters
 public class allWidgets {
     public void widgets() {
         JFrame frame = new JFrame();
